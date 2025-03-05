@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>النادي الطلابي التقني</title>
+    <style>
+        /* تنسيق عام */
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #8A2BFF;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        nav {
+            background-color: #6119BA;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-size: 18px;
+        }
+        section {
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #6119BA;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .btn {
+            background-color: #20C356;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #177A3C;
+        }
+        /* نموذج التواصل */
+        .contact-form {
+            margin-top: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        النادي الطلابي التقني
+    </header>
+
+    <nav>
+        <a href="#about">عن النادي</a>
+        <a href="#sections">الأقسام</a>
+        <a href="#team">الأعضاء</a>
+        <a href="#contact">اتصل بنا</a>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h2>عن النادي</h2>
+            <p>النادي الطلابي التقني هو مبادرة تهدف إلى تعزيز مهارات الطلاب في مجالات التقنية المختلفة عبر ورش عمل، مشاريع، وفعاليات.</p>
+        </div>
+    </section>
+
+    <section id="sections">
+        <div class="container">
+            <h2>أقسام النادي</h2>
+            <ul>
+                <li>ورش العمل التقنية</li>
+                <li>المشاريع التكنولوجية</li>
+                <li>المسابقات والفعاليات</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="container">
+            <h2>أعضاء الفريق</h2>
+            <p>قائمة بأعضاء النادي وأدوارهم.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>اتصل بنا</h2>
+            <p>يمكنك التواصل معنا عبر النموذج أدناه:</p>
+            <form class="contact-form">
+                <input type="text" id="name" placeholder="الاسم" required>
+                <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+                <textarea id="message" rows="4" placeholder="رسالتك" required></textarea>
+                <button type="button" class="btn" onclick="sendMessage()">إرسال</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        جميع الحقوق محفوظة © 2025 - النادي الطلابي التقني
+    </footer>
+
+    <script>
+        function sendMessage() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+            
+            if (name === "" || email === "" || message === "") {
+                alert("يرجى ملء جميع الحقول!");
+                return;
+            }
+            
+            alert("تم إرسال الرسالة بنجاح! سنقوم بالرد عليك قريبًا.");
+            document.querySelector(".contact-form").reset();
+        }
+    </script>
+
+</body>
+</html>
